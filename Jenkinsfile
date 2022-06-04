@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Deploy app on docker swarm from docker-compose file.') {
             steps {
-                sh 'docker stack deploy -d docker-compose.yml secretsexample'
+                sh 'docker stack deploy -c docker-compose.yml secretsexample'
             }
         }
         stage('Approval to kill'){
